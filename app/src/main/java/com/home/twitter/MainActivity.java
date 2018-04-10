@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         mag.add(Float.toString(response.getDocumentSentiment().getMagnitude()));
                         this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText()));
                         String key1 = mDatabase.push().getKey();
-                        //mDatabase.child(key1).setValue(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText()));
+                        mDatabase.child(key1).setValue(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText()));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

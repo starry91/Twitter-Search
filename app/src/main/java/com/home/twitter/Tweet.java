@@ -8,8 +8,8 @@ import com.google.firebase.database.IgnoreExtraProperties;
  */
 @IgnoreExtraProperties
 public class Tweet {
-    String tweetBy;
-    String tweet;
+    public String tweetBy;
+    public String tweet;
 
     public Tweet() {
     }
