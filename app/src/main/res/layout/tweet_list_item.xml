@@ -18,4 +18,12 @@ android:padding="5dip" >
         android:gravity="end"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/txtMag"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="3dip"
+        android:textStyle="bold" />
+
+
 </LinearLayout>

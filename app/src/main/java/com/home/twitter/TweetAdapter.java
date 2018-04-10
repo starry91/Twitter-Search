@@ -16,10 +16,14 @@ import java.util.ArrayList;
 
 public class TweetAdapter extends BaseAdapter {
     ArrayList<Tweet> tweetList;
+    ArrayList<String> score;
+    ArrayList<String> mag;
     Context context;
 
-    public TweetAdapter(Context context, ArrayList<Tweet> tweetList) {
+    public TweetAdapter(Context context, ArrayList<Tweet> tweetList, ArrayList<String> score, ArrayList<String> mag) {
         this.tweetList = tweetList;
+        this.score = score;
+        this.mag = mag;
         this.context = context;
     }
 
@@ -46,11 +50,17 @@ public class TweetAdapter extends BaseAdapter {
         }
 
         Tweet tweet = tweetList.get(position);
+        String tweetscore = score.get(position);
+        String tweetmag = mag.get(position);
         TextView txtTweet = (TextView) convertView.findViewById(R.id.txtTweet);
         TextView txtTweetBy = (TextView) convertView.findViewById(R.id.txtTweetBy);
+        //TextView txtScore = (TextView) convertView.findViewById(R.id.txtScore);
+        TextView txtMag = (TextView) convertView.findViewById(R.id.txtMag);
 
         txtTweet.setText(tweet.getTweet());
         txtTweetBy.setText(tweet.getTweetBy());
+        txtMag.setText("Score "+tweetscore + " Magnitute: "+ tweetmag);
+        //txtScore.setText(tweetmag);
 
         return convertView;
     }
