@@ -1,2 +1,2 @@
 # Twitter-Search
-Android App to get tweets based on search keyword
+Android App to get sentiment analysis of tweets based on search keyword
